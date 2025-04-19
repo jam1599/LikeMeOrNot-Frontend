@@ -1,0 +1,57 @@
+/* LockedReply.css */
+
+.locked-reply {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.locked-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.unlock-btn,
+.premium-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 10px 0;
+}
+
+.unlock-btn {
+  background-color: #7daaf9;
+  color: #fff;
+}
+
+.unlock-btn:hover {
+  background-color: #6e9be3;
+  transform: translateY(-2px);
+}
+
+.or-text {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+.premium-btn {
+  background-color: #f99de3;
+  color: #fff;
+}
+
+.premium-btn:hover {
+  background-color: #e489d1;
+  transform: translateY(-2px);
+}

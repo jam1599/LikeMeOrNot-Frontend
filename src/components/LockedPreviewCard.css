@@ -1,0 +1,42 @@
+/* LockedPreviewCard.css */
+
+.locked-preview-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+
+.preview-text {
+  font-size: 1rem;
+  color: #555;
+  filter: blur(3px); /* applies a blur effect, can adjust value */
+  margin-bottom: 20px;
+}
+
+.unlock-preview-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #7daaf9;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.unlock-preview-btn:hover {
+  background-color: #6e9be3;
+  transform: translateY(-2px);
+}
+
+.upsell-note {
+  font-size: 0.9rem;
+  color: #777;
+}
