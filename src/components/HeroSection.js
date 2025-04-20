@@ -107,7 +107,8 @@ function HeroSection({
     formData.append("password", password);
 
     try {
-      const response = await fetch("http://localhost:8000/token", {
+      // const response = await fetch("http://localhost:8000/token", {
+        const response = await fetch(`${API}/token`, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData.toString(),
@@ -152,7 +153,8 @@ function HeroSection({
     e.preventDefault();
     try {
       // Make a POST request to your /users endpoint to actually store user data
-      const response = await fetch("http://localhost:8000/users", {
+      // const response = await fetch("http://localhost:8000/users", {
+        const response = await fetch(`${API}/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -191,7 +193,8 @@ function HeroSection({
       return;
     }
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
+      // const response = await fetch("http://localhost:8000/analyze", {
+        const response = await fetch(`${API}/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -244,7 +247,8 @@ function HeroSection({
       const formData = new FormData();
       formData.append("image", file);
       try {
-        const response = await fetch("http://localhost:8000/analyze-image", {
+        // const response = await fetch("http://localhost:8000/analyze-image", {
+          const response = await fetch(`${API}/analyze-image`, {
           method: "POST",
           headers: token ? { Authorization: `Bearer ${token}` } : {},
           body: formData,
@@ -291,7 +295,8 @@ function HeroSection({
   const handleStripeCheckout = async () => {
     const stripe = await stripePromise;
     try {
-      const response = await fetch("http://localhost:8000/create-checkout-session", {
+      // const response = await fetch("http://localhost:8000/create-checkout-session", {
+        const response = await fetch(`${API}/create-checkout-session`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
