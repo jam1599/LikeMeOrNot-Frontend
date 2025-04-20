@@ -5,6 +5,9 @@ import BreakdownSection from "./components/BreakdownSection";
 import FeatureSection from "./components/FeatureSection";
 import FooterCTA from "./components/FooterCTA";
 
+// ← Grab your backend base URL from .env
+const API = process.env.REACT_APP_API_URL; // e.g. https://likemeornot-backend.onrender.com
+
 function App() {
   const [freeScanUsed, setFreeScanUsed] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -48,9 +51,12 @@ useEffect(() => {
     return;
   }
 
-  fetch("http://localhost:8000/users/me", {
-    headers: { Authorization: `Bearer ${token}` },
-  })
+  // fetch("http://localhost:8000/users/me", {
+  //   headers: { Authorization: `Bearer ${token}` },
+  // })
+    fetch(`${API}/users/me`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then(res => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res.json();             // ← parse JSON here!
@@ -150,7 +156,8 @@ useEffect(() => {
     setLoading(true);
     try {
       console.log("Sending text to backend for analysis...");
-      const response = await fetch("http://localhost:8000/analyze", {
+      // const response = await fetch("http://localhost:8000/analyze", {
+        const response = await fetch(`${API}/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -178,7 +185,8 @@ useEffect(() => {
       console.log("Sending image to backend for analysis...");
       const formData = new FormData();
       formData.append("image", file);
-      const response = await fetch("http://localhost:8000/analyze-image", {
+      // const response = await fetch("http://localhost:8000/analyze-image", {
+        const response = await fetch(`${API}/analyze-image`, {
         method: "POST",
         headers: token ? { "Authorization": `Bearer ${token}` } : {},
         body: formData,

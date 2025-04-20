@@ -8,6 +8,9 @@ import { loadStripe } from "@stripe/stripe-js"; // Import Stripe.js
 
 // Initialize Stripe with your live or test publishable key.
 // const stripePromise = loadStripe("pk_test_51QmxXNPqcp3jD0diXZgV5rEafhQarXnFPDxxmk9ykMOKikRbAiqUh7IyJbgjWvF3c2w1uuno1IvI8wlHUVLxas6a00JZiwucx7");
+// HeroSection.js (or App.js)
+const API = process.env.REACT_APP_API_URL;  // → "https://likemeornot-backend.onrender.com"
+
 const stripePromise = loadStripe("pk_live_51QmxXHLIfxI8v49WklmwIPbZsneDNa1cK2YuEVBDNGFcNphXi5PrxFGMK9sUE9ilG1hUyWScTDUV8JvjUM5YperD00LFcjDWCY");
 /**
  * This component includes:
