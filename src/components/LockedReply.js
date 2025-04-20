@@ -22,7 +22,8 @@ function LockedReply(props) {
     const stripe = await stripePromise;
 
     // 1) Create the session on your backend
-    const resp = await fetch("http://localhost:8000/create-checkout-session", {
+    // const resp = await fetch("http://localhost:8000/create-checkout-session", {
+      const resp = await fetch("https://likemeornot-backend.onrender.com/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +56,8 @@ function LockedReply(props) {
     const stripe = await stripePromise;
 
     // 1) Create the session on your backend
-    const resp = await fetch("http://localhost:8000/create-subscription-session", {
+    // const resp = await fetch("http://localhost:8000/create-subscription-session", {
+      const resp = await fetch("https://likemeornot-backend.onrender.com/create-subscription-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
