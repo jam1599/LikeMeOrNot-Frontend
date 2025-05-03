@@ -6,6 +6,7 @@ import { loadStripe } from "@stripe/stripe-js";  // Import Stripe.js
 // Initialize Stripe with your live or test publishable key.
 // const stripePromise = loadStripe("pk_test_51QmxXNPqcp3jD0diXZgV5rEafhQarXnFPDxxmk9ykMOKikRbAiqUh7IyJbgjWvF3c2w1uuno1IvI8wlHUVLxas6a00JZiwucx7");
 const stripePromise = loadStripe("pk_live_51QmxXHLIfxI8v49WklmwIPbZsneDNa1cK2YuEVBDNGFcNphXi5PrxFGMK9sUE9ilG1hUyWScTDUV8JvjUM5YperD00LFcjDWCY");
+
 function LockedReply(props) {
   // Try to get JWT from props, fallback to localStorage
   // let token = props.token;
